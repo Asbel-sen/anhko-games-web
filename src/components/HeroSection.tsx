@@ -28,9 +28,9 @@ const HeroSection = () => {
         <div className="text-center max-w-4xl mx-auto">
           {/* Logo */}
           <div className="mb-8 animate-scale-in">
-            <img src={logo} alt="ANHKO GAMES" style={{
+            <img alt="ANHKO GAMES" style={{
             mixBlendMode: 'lighten'
-          }} className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto object-contain opacity-95" />
+          }} className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto object-contain opacity-95" src="/lovable-uploads/01b1a721-235d-4401-8f44-ae138ddb07c2.png" />
           </div>
 
           {/* Slogan */}
