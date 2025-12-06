@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    --background: 222 47% 5%;
-    --foreground: 180 100% 95%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
 
-    --card: 222 47% 8%;
-    --card-foreground: 180 100% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 222 47% 8%;
-    --popover-foreground: 180 100% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 180 100% 50%;
-    --primary-foreground: 222 47% 5%;
+    --primary: 5 96% 46%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 320 100% 60%;
+    --secondary: 282 82% 37%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 222 30% 15%;
-    --muted-foreground: 180 20% 60%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 270 100% 65%;
+    --accent: 282 82% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 180 50% 20%;
-    --input: 222 30% 15%;
-    --ring: 180 100% 50%;
+    --border: 282 50% 25%;
+    --input: 0 0% 15%;
+    --ring: 5 96% 46%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --glow-cyan: 0 0 20px hsl(180 100% 50% / 0.5), 0 0 40px hsl(180 100% 50% / 0.3);
-    --glow-magenta: 0 0 20px hsl(320 100% 60% / 0.5), 0 0 40px hsl(320 100% 60% / 0.3);
-    --glow-purple: 0 0 20px hsl(270 100% 65% / 0.5), 0 0 40px hsl(270 100% 65% / 0.3);
+    --glow-red: 0 0 20px hsl(5 96% 46% / 0.5), 0 0 40px hsl(5 96% 46% / 0.3);
+    --glow-purple: 0 0 20px hsl(282 82% 37% / 0.5), 0 0 40px hsl(282 82% 37% / 0.3);
+    --glow-accent: 0 0 20px hsl(282 82% 50% / 0.5), 0 0 40px hsl(282 82% 50% / 0.3);
     
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 5%) 0%, hsl(270 50% 10%) 50%, hsl(222 47% 5%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(222 47% 10%) 0%, hsl(222 47% 6%) 100%);
-    --gradient-neon: linear-gradient(90deg, hsl(180 100% 50%) 0%, hsl(320 100% 60%) 50%, hsl(270 100% 65%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(282 50% 10%) 50%, hsl(0 0% 5%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 10%) 0%, hsl(0 0% 6%) 100%);
+    --gradient-neon: linear-gradient(90deg, hsl(5 96% 46%) 0%, hsl(282 82% 37%) 50%, hsl(282 82% 50%) 100%);
     
     --font-display: 'Orbitron', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
@@ -66,24 +66,24 @@
 }
 
 @layer components {
-  .text-glow-cyan {
-    text-shadow: var(--glow-cyan);
-  }
-
-  .text-glow-magenta {
-    text-shadow: var(--glow-magenta);
+  .text-glow-red {
+    text-shadow: var(--glow-red);
   }
 
   .text-glow-purple {
     text-shadow: var(--glow-purple);
   }
 
-  .box-glow-cyan {
-    box-shadow: var(--glow-cyan);
+  .text-glow-accent {
+    text-shadow: var(--glow-accent);
   }
 
-  .box-glow-magenta {
-    box-shadow: var(--glow-magenta);
+  .box-glow-red {
+    box-shadow: var(--glow-red);
+  }
+
+  .box-glow-purple {
+    box-shadow: var(--glow-purple);
   }
 
   .gradient-text {
@@ -91,6 +91,21 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .bg-pattern {
+    background-image: url('/images/background-pattern.png');
+    background-repeat: repeat;
+    background-size: 400px;
+  }
+
+  .interactive-blur {
+    transition: filter 0.3s ease;
+  }
+
+  .interactive-blur:hover,
+  .interactive-blur:focus-within {
+    filter: blur(2px);
   }
 
   .scanlines {
@@ -198,10 +213,10 @@
 
   @keyframes pulse-glow {
     0%, 100% {
-      box-shadow: 0 0 20px hsl(180 100% 50% / 0.3);
+      box-shadow: 0 0 20px hsl(5 96% 46% / 0.3);
     }
     50% {
-      box-shadow: 0 0 40px hsl(180 100% 50% / 0.6), 0 0 60px hsl(320 100% 60% / 0.3);
+      box-shadow: 0 0 40px hsl(5 96% 46% / 0.6), 0 0 60px hsl(282 82% 37% / 0.3);
     }
   }
 

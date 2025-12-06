@@ -51,17 +51,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        cyan: {
-          DEFAULT: "hsl(180 100% 50%)",
-          glow: "hsl(180 100% 60%)",
-        },
-        magenta: {
-          DEFAULT: "hsl(320 100% 60%)",
-          glow: "hsl(320 100% 70%)",
+        red: {
+          DEFAULT: "hsl(5 96% 46%)",
+          glow: "hsl(5 96% 56%)",
         },
         purple: {
-          DEFAULT: "hsl(270 100% 65%)",
-          glow: "hsl(270 100% 75%)",
+          DEFAULT: "hsl(282 82% 37%)",
+          glow: "hsl(282 82% 50%)",
         },
       },
       borderRadius: {

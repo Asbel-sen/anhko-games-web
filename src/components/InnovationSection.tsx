@@ -22,7 +22,7 @@ const innovations = [
   {
     icon: Cpu,
     title: "Fusión creativa",
-    description: "Combinación fresca de música, reflejos y visuales",
+    description: "Combinación fresca de música, visuales y mecánicas únicas",
     gradient: "from-primary to-secondary",
   },
 ];
