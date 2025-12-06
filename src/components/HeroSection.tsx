@@ -30,7 +30,7 @@ const HeroSection = () => {
           <div className="mb-8 animate-scale-in">
             <img alt="ANHKO GAMES" style={{
             mixBlendMode: 'lighten'
-          }} className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto object-contain opacity-95" src="/lovable-uploads/01b1a721-235d-4401-8f44-ae138ddb07c2.png" />
+          }} src="/lovable-uploads/01b1a721-235d-4401-8f44-ae138ddb07c2.png" className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto object-contain opacity-100" />
           </div>
 
           {/* Slogan */}
@@ -63,9 +63,7 @@ const HeroSection = () => {
 
           {/* Scroll indicator */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 rounded-full border-2 border-primary/50 flex justify-center pt-2">
-              <div className="w-1 h-2 bg-primary rounded-full" />
-            </div>
+            
           </div>
         </div>
       </div>
