@@ -6,7 +6,7 @@ const tools = [
   { name: "Visual Studio Code", icon: Code, category: "IDE" },
   { name: "Photoshop", icon: Palette, category: "Arte" },
   { name: "Krita", icon: Palette, category: "Arte" },
-  { name: "Aseprite", icon: Layers, category: "Pixel Art" },
+  { name: "Sublime Text", icon: Code, category: "IDE" },
   { name: "FL Studio", icon: Music, category: "Audio" },
   { name: "Audacity", icon: Music, category: "Audio" },
   { name: "Git / GitHub", icon: GitBranch, category: "Control" },

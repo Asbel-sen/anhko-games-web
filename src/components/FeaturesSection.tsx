@@ -23,8 +23,8 @@ const features = [
   },
   {
     icon: TrendingUp,
-    title: "Dificultad progresiva",
-    description: "Curva de aprendizaje balanceada y desafiante",
+    title: "Mecánicas únicas",
+    description: "Hacen que tu experiencia de juego sea completamente diferente a otros juegos",
   },
 ];
 
