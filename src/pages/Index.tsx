@@ -21,33 +21,15 @@ const Index = () => {
       <div className="relative z-10">
         <Navigation />
         <HeroSection />
-        <div className="interactive-blur">
-          <AboutSection />
-        </div>
-        <div className="interactive-blur">
-          <GameDescriptionSection />
-        </div>
-        <div className="interactive-blur">
-          <FeaturesSection />
-        </div>
-        <div className="interactive-blur">
-          <InnovationSection />
-        </div>
-        <div className="interactive-blur">
-          <ToolsSection />
-        </div>
-        <div className="interactive-blur">
-          <TeamSection />
-        </div>
-        <div className="interactive-blur">
-          <MaterialsSection />
-        </div>
-        <div className="interactive-blur">
-          <ValuesSection />
-        </div>
-        <div className="interactive-blur">
-          <ContactSection />
-        </div>
+        <AboutSection />
+        <GameDescriptionSection />
+        <FeaturesSection />
+        <InnovationSection />
+        <ToolsSection />
+        <TeamSection />
+        <MaterialsSection />
+        <ValuesSection />
+        <ContactSection />
         <Footer />
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { Music, Gamepad2, Zap } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
@@ -36,19 +37,15 @@ const HeroSection = () => {
 
       <div className="container relative z-10 px-4 md:px-8">
         <div className="text-center max-w-4xl mx-auto">
-          {/* Logo placeholder */}
+          {/* Logo */}
           <div className="mb-8 animate-scale-in">
-            <div className="inline-flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-muted/50 border border-border pulse-glow">
-              <Gamepad2 className="w-16 h-16 md:w-20 md:h-20 text-primary" />
-            </div>
+            <img 
+              src={logo} 
+              alt="ANHKO GAMES" 
+              className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto object-contain"
+              style={{ mixBlendMode: 'lighten' }}
+            />
           </div>
-
-          {/* Title */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 animate-slide-up">
-            <span className="text-glow-cyan text-primary">ANHKO</span>
-            <span className="text-foreground"> </span>
-            <span className="text-glow-magenta text-secondary">GAMES</span>
-          </h1>
 
           {/* Slogan */}
           <p className="text-xl md:text-2xl lg:text-3xl font-body text-muted-foreground mb-12 animate-slide-up animation-delay-200">
@@ -59,19 +56,19 @@ const HeroSection = () => {
           {/* CTA Icons */}
           <div className="flex justify-center gap-8 md:gap-12 animate-slide-up animation-delay-300">
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="p-4 rounded-xl bg-muted/50 border border-border group-hover:border-primary transition-all duration-300 group-hover:box-glow-cyan">
+              <div className="p-4 rounded-xl bg-muted/50 border border-border group-hover:border-primary transition-all duration-300 group-hover:box-glow-red">
                 <Music className="w-8 h-8 text-primary" />
               </div>
               <span className="text-sm text-muted-foreground">Ritmo</span>
             </div>
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="p-4 rounded-xl bg-muted/50 border border-border group-hover:border-secondary transition-all duration-300 group-hover:box-glow-magenta">
+              <div className="p-4 rounded-xl bg-muted/50 border border-border group-hover:border-secondary transition-all duration-300 group-hover:box-glow-purple">
                 <Gamepad2 className="w-8 h-8 text-secondary" />
               </div>
               <span className="text-sm text-muted-foreground">Acción</span>
             </div>
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="p-4 rounded-xl bg-muted/50 border border-border group-hover:border-accent transition-all duration-300">
+              <div className="p-4 rounded-xl bg-muted/50 border border-border group-hover:border-accent transition-all duration-300 group-hover:box-glow-purple">
                 <Zap className="w-8 h-8 text-accent" />
               </div>
               <span className="text-sm text-muted-foreground">Reflejos</span>
