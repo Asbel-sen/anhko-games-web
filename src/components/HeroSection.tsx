@@ -1,50 +1,36 @@
 import { Music, Gamepad2, Zap } from "lucide-react";
 import logo from "@/assets/logo.png";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden scanlines">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden scanlines">
       {/* Animated background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
       
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-primary rounded-full opacity-50 float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${4 + Math.random() * 4}s`,
-            }}
-          />
-        ))}
+        {[...Array(20)].map((_, i) => <div key={i} className="absolute w-1 h-1 bg-primary rounded-full opacity-50 float" style={{
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 5}s`,
+        animationDuration: `${4 + Math.random() * 4}s`
+      }} />)}
       </div>
 
       {/* Grid overlay */}
-      <div 
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: `
+      <div className="absolute inset-0 opacity-10" style={{
+      backgroundImage: `
             linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
             linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px',
-        }}
-      />
+      backgroundSize: '50px 50px'
+    }} />
 
       <div className="container relative z-10 px-4 md:px-8">
         <div className="text-center max-w-4xl mx-auto">
           {/* Logo */}
           <div className="mb-8 animate-scale-in">
-            <img 
-              src={logo} 
-              alt="ANHKO GAMES" 
-              className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto object-contain"
-              style={{ mixBlendMode: 'lighten' }}
-            />
+            <img src={logo} alt="ANHKO GAMES" style={{
+            mixBlendMode: 'lighten'
+          }} className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto object-contain opacity-95" />
           </div>
 
           {/* Slogan */}
@@ -83,8 +69,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
