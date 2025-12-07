@@ -61,16 +61,14 @@ const GameDescriptionSection = () => {
           ))}
         </div>
 
-        {/* Video Demo Placeholder */}
+        {/* Video Demo */}
         <div className="max-w-4xl mx-auto">
-          <div className="card-cyber rounded-2xl aspect-video flex items-center justify-center group cursor-pointer hover:border-primary/50 transition-all duration-300">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 mb-4 group-hover:scale-110 group-hover:bg-primary/30 transition-all duration-300">
-                <Play className="w-8 h-8 text-primary ml-1" />
-              </div>
-              <p className="text-muted-foreground">Video Demo</p>
-              <p className="text-sm text-muted-foreground/60 mt-1">Próximamente</p>
-            </div>
+          <div className="card-cyber rounded-2xl overflow-hidden">
+            <img 
+              src="/images/game-demo.gif" 
+              alt="Demo del juego ANHKO GAMES" 
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>
