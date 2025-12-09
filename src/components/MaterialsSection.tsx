@@ -1,7 +1,11 @@
 import { KeyRound, CreditCard, FileText, Image, Check, Pin } from "lucide-react";
 import { useState, useEffect } from "react";
-import pin1 from "@/assets/pin-1.png";
-import pin2 from "@/assets/pin-2.png";
+import promo1 from "@/assets/promo-1.png";
+import promo2 from "@/assets/promo-2.png";
+import promo3 from "@/assets/promo-3.png";
+import promo4 from "@/assets/promo-4.png";
+import promo5 from "@/assets/promo-5.png";
+import promo6 from "@/assets/promo-6.png";
 
 const materials = [{
   icon: KeyRound,
@@ -25,7 +29,7 @@ const materials = [{
   available: true
 }];
 
-const carouselImages = [pin1, pin2];
+const carouselImages = [promo1, promo2, promo3, promo4, promo5, promo6];
 
 const MaterialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
