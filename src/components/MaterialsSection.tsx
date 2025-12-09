@@ -83,7 +83,7 @@ const MaterialsSection = () => {
                 key={index}
                 src={img}
                 alt={`Promocional ${index + 1}`}
-                className={`absolute inset-0 w-full h-full object-contain p-8 transition-opacity duration-700 ${
+                className={`absolute inset-0 w-full h-full object-contain p-8 rounded-2xl transition-opacity duration-700 ${
                   index === currentIndex ? "opacity-100" : "opacity-0"
                 }`}
               />
