@@ -2,7 +2,7 @@ const Spectrogram = () => {
   const bars = 64;
   
   return (
-    <div className="flex items-end justify-center gap-0.5 h-48 w-full opacity-30">
+    <div className="flex items-end justify-center gap-0.5 h-80 w-full opacity-30">
       {[...Array(bars)].map((_, i) => (
         <div
           key={i}
