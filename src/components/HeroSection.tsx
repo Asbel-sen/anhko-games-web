@@ -62,12 +62,12 @@ const HeroSection = () => {
               <span className="text-sm text-muted-foreground">Reflejos</span>
             </div>
           </div>
-
-          {/* Spectrogram */}
-          <div className="mt-12 animate-fade-in animation-delay-400">
-            <Spectrogram />
-          </div>
         </div>
+      </div>
+
+      {/* Spectrogram as background */}
+      <div className="absolute bottom-0 left-0 right-0 z-0 pointer-events-none">
+        <Spectrogram />
       </div>
     </section>;
 };
