@@ -1,5 +1,7 @@
 import { Music, Gamepad2, Zap } from "lucide-react";
 import logo from "@/assets/logo.png";
+import Spectrogram from "./Spectrogram";
+
 const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden scanlines">
       {/* Animated background elements */}
@@ -61,9 +63,9 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            
+          {/* Spectrogram */}
+          <div className="mt-12 animate-fade-in animation-delay-400">
+            <Spectrogram />
           </div>
         </div>
       </div>
