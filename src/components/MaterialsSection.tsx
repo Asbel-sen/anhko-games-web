@@ -77,13 +77,13 @@ const MaterialsSection = () => {
 
         {/* Photo Carousel with Fade */}
         <div className="max-w-3xl mx-auto">
-          <div className="card-cyber rounded-2xl aspect-video flex items-center justify-center overflow-hidden relative">
+          <div className="rounded-2xl aspect-video flex items-center justify-center overflow-hidden relative">
             {carouselImages.map((img, index) => (
               <img
                 key={index}
                 src={img}
                 alt={`Promocional ${index + 1}`}
-                className={`absolute inset-4 md:inset-8 w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] h-[calc(100%-2rem)] md:h-[calc(100%-4rem)] object-contain rounded-2xl transition-opacity duration-700 ${
+                className={`absolute inset-0 w-full h-full object-cover rounded-2xl transition-opacity duration-700 ${
                   index === currentIndex ? "opacity-100" : "opacity-0"
                 }`}
               />
