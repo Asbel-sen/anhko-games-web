@@ -1,13 +1,19 @@
-import { User } from "lucide-react";
+import christoferImg from "@/assets/team-christofer.png";
+import asbelImg from "@/assets/team-asbel.png";
+import saulImg from "@/assets/team-saul.png";
+import makImg from "@/assets/team-mak.png";
+import tovarImg from "@/assets/team-tovar.png";
+import christianImg from "@/assets/team-christian.png";
+import yaelImg from "@/assets/team-yael.png";
 
 const team = [
-  { name: "Christofer", role: "Líder & Diseñador Gráfico", color: "primary" },
-  { name: "Asbel", role: "Programador", color: "secondary" },
-  { name: "Saúl", role: "Analista", color: "accent" },
-  { name: "Mak", role: "Capturista", color: "primary" },
-  { name: "Tovar", role: "Documentación", color: "secondary" },
-  { name: "Christian", role: "Técnico / Logística", color: "accent" },
-  { name: "Yael", role: "Comunicación", color: "primary" },
+  { name: "Christofer", role: "Líder & Diseñador Gráfico", color: "primary", image: christoferImg },
+  { name: "Asbel", role: "Programador", color: "secondary", image: asbelImg },
+  { name: "Saúl", role: "Analista", color: "accent", image: saulImg },
+  { name: "Mak", role: "Capturista", color: "primary", image: makImg },
+  { name: "Tovar", role: "Documentación", color: "secondary", image: tovarImg },
+  { name: "Christian", role: "Técnico / Logística", color: "accent", image: christianImg },
+  { name: "Yael", role: "Comunicación", color: "primary", image: yaelImg },
 ];
 
 const TeamSection = () => {
@@ -25,14 +31,18 @@ const TeamSection = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
-          {team.map((member, index) => (
+          {team.map((member) => (
             <div
               key={member.name}
               className="card-cyber rounded-xl p-6 text-center group hover:border-primary/50 transition-all duration-300 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
             >
-              {/* Avatar placeholder */}
-              <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-${member.color}/10 border-2 border-${member.color}/30 flex items-center justify-center group-hover:border-${member.color} transition-colors duration-300`}>
-                <User className={`w-10 h-10 text-${member.color}`} />
+              {/* Avatar with real photo */}
+              <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-${member.color}/10 border-2 border-${member.color}/30 overflow-hidden group-hover:border-${member.color} transition-colors duration-300`}>
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               <h3 className="font-display font-bold text-lg text-foreground mb-1">
