@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { X } from "lucide-react";
 import christoferImg from "@/assets/team-christofer.png";
 import asbelImg from "@/assets/team-asbel.png";
 import saulImg from "@/assets/team-saul.png";
@@ -17,6 +19,8 @@ const team = [
 ];
 
 const TeamSection = () => {
+  const [selectedMember, setSelectedMember] = useState<typeof team[0] | null>(null);
+
   return (
     <section className="py-24 relative" id="team">
       <div className="container px-4 md:px-8">
@@ -34,7 +38,8 @@ const TeamSection = () => {
           {team.map((member) => (
             <div
               key={member.name}
-              className="card-cyber rounded-xl p-6 text-center group hover:border-primary/50 transition-all duration-300 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+              className="card-cyber rounded-xl p-6 text-center group hover:border-primary/50 transition-all duration-300 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] cursor-pointer"
+              onClick={() => setSelectedMember(member)}
             >
               {/* Avatar with real photo */}
               <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-${member.color}/10 border-2 border-${member.color}/30 overflow-hidden group-hover:border-${member.color} transition-colors duration-300`}>
@@ -59,6 +64,39 @@ const TeamSection = () => {
       {/* Decorative elements */}
       <div className="absolute top-1/2 left-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
       <div className="absolute top-1/2 right-0 w-48 h-48 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2" />
+
+      {/* Modal for full image */}
+      {selectedMember && (
+        <div 
+          className="fixed inset-0 bg-background/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedMember(null)}
+        >
+          <button 
+            className="absolute top-4 right-4 p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
+            onClick={() => setSelectedMember(null)}
+          >
+            <X className="w-6 h-6 text-foreground" />
+          </button>
+          <div 
+            className="flex flex-col items-center gap-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedMember.image}
+              alt={selectedMember.name}
+              className="max-w-full max-h-[70vh] object-contain rounded-2xl"
+            />
+            <div className="text-center">
+              <h3 className="font-display font-bold text-2xl text-foreground mb-1">
+                {selectedMember.name}
+              </h3>
+              <p className="text-primary text-lg">
+                {selectedMember.role}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

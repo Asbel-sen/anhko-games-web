@@ -1,4 +1,4 @@
-import { KeyRound, CreditCard, FileText, Image, Check, Pin } from "lucide-react";
+import { KeyRound, CreditCard, FileText, Image, Check, Pin, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import promo1 from "@/assets/promo-1.png";
 import promo2 from "@/assets/promo-2.png";
@@ -33,6 +33,7 @@ const carouselImages = [promo1, promo2, promo3, promo4, promo5, promo6];
 
 const MaterialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -77,7 +78,10 @@ const MaterialsSection = () => {
 
         {/* Photo Carousel with Fade */}
         <div className="max-w-3xl mx-auto">
-          <div className="rounded-2xl aspect-video flex items-center justify-center overflow-hidden relative">
+          <div 
+            className="rounded-2xl aspect-video flex items-center justify-center overflow-hidden relative cursor-pointer"
+            onClick={() => setShowModal(true)}
+          >
             {carouselImages.map((img, index) => (
               <img
                 key={index}
@@ -93,7 +97,10 @@ const MaterialsSection = () => {
               {carouselImages.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCurrentIndex(index);
+                  }}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex ? "bg-primary w-6" : "bg-muted-foreground/40"
                   }`}
@@ -103,6 +110,27 @@ const MaterialsSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal for full image */}
+      {showModal && (
+        <div 
+          className="fixed inset-0 bg-background/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setShowModal(false)}
+        >
+          <button 
+            className="absolute top-4 right-4 p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
+            onClick={() => setShowModal(false)}
+          >
+            <X className="w-6 h-6 text-foreground" />
+          </button>
+          <img
+            src={carouselImages[currentIndex]}
+            alt={`Promocional ${currentIndex + 1}`}
+            className="max-w-full max-h-[90vh] object-contain rounded-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
